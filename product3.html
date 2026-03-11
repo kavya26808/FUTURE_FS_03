@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Page</title>
+<link rel="stylesheet" href="style3.css">
+
+<style>
+
+.product-container{
+text-align:center;
+padding:40px;
+}
+
+.product-container img{
+width:300px;
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+margin:10px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Urban spice Kitchen </h1>
+
+<nav>
+<a href="index3.html">Home</a>
+<a href="menu3.html">Menu</a>
+<a href="contact3.html">Contact</a>
+</nav>
+
+</header>
+
+<div class="product-container">
+
+<img id="foodImg">
+
+<h2 id="foodName"></h2>
+
+<h3 id="foodPrice"></h3>
+
+<div>
+
+<button onclick="decrease()">-</button>
+
+<span id="qty">1</span>
+
+<button onclick="increase()">+</button>
+
+</div>
+
+<h3>Total: ₹<span id="totalPrice"></span></h3>
+
+<button>Place Order</button>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get("name");
+const price = params.get("price");
+const img = params.get("img");
+
+document.getElementById("foodName").innerText = name;
+document.getElementById("foodPrice").innerText = "Price: ₹" + price;
+document.getElementById("foodImg").src = img;
+
+let quantity = 1;
+
+document.getElementById("totalPrice").innerText = price;
+
+function increase(){
+quantity++;
+updatePrice();
+}
+
+function decrease(){
+if(quantity>1){
+quantity--;
+updatePrice();
+}
+}
+
+function updatePrice(){
+
+document.getElementById("qty").innerText = quantity;
+
+let total = quantity * price;
+
+document.getElementById("totalPrice").innerText = total;
+
+}
+
+</script>
+
+</body>
+</html>

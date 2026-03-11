@@ -1,0 +1,154 @@
+/* BODY */
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+
+/* SAME BACKGROUND FOR ALL PAGES */
+
+background-image:url("https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+}
+
+/* HEADER */
+
+header{
+background:#222;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+}
+
+nav a:hover{
+color:#ffb703;
+}
+
+/* HERO SECTION */
+
+.hero{
+padding:150px 20px;
+text-align:center;
+color:white;
+min-height:500px;
+}
+
+/* SECTION (NO WHITE SCREEN) */
+
+section{
+margin:30px;
+padding:30px;
+color:white;
+}
+
+/* HOME CARDS */
+
+.home-cards{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(0,0,0,0.6);
+padding:20px;
+width:200px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.5);
+text-align:center;
+}
+
+/* MENU GRID */
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.menu-card{
+background:rgba(0,0,0,0.6);
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.5);
+text-align:center;
+}
+
+.menu-card img{
+width:100%;
+border-radius:10px;
+height:160px;
+object-fit:cover;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery-grid img{
+width:100%;
+border-radius:10px;
+height:150px;
+object-fit:cover;
+}
+
+/* CONTACT FORM */
+
+form{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+form input,
+textarea{
+width:300px;
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:none;
+}
+
+/* BUTTON */
+
+button{
+padding:12px 25px;
+background:#e63946;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#c1121f;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
